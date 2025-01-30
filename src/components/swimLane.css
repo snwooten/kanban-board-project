@@ -1,0 +1,10 @@
+.swimLaneContainer {
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100vh;
+	width: 450px;
+	border: 1px solid blue;
+}
