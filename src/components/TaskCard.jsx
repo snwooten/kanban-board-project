@@ -1,14 +1,17 @@
 import React from 'react'
 import './taskCard.css'
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 
-const TaskCard = ({ title }) => {
+const TaskCard = props => {
+	const { title, id } = props
 	const {
 		attributes,
 		listeners,
 		setNodeRef,
 		transform,
 		transition,
-	  } = useSortable({id: props.id});
+	  } = useSortable({id: id});
 	  
 	  const style = {
 		transform: CSS.Transform.toString(transform),
