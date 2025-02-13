@@ -5,6 +5,7 @@ import useMockData from './api/useMockData';
 import { useReducer, useState, useEffect } from 'react';
 import { INITIAL_STATE } from './reducers/reducers.js'
 import _ from 'lodash'
+import React from 'react';
 
 function reducer(state, action) {
   switch(action.type){
@@ -35,7 +36,7 @@ function App() {
     <div className="App">
       <header className="App-header">
 		<SwimLane>
-			{Object.values(cards)?.map(card => <TaskCard title={card.title}/>)}
+			{Object.values(cards)?.map(card => <TaskCard key={card.id} title={card.title}/>)}
 		</SwimLane>
       </header>
     </div>
